@@ -1,0 +1,9 @@
+---
+const { text, iconSVG } = Astro.props; 
+---
+
+<li class="flex items-center">
+    <Fragment set:html={iconSVG} /> 
+    
+    <span>{text}</span>
+</li>
