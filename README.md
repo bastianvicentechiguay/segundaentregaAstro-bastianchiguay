@@ -4,15 +4,6 @@ Sitio web de Funeraria Pluma, desarrollado con Astro. Muestra información sobre
 
 ## 📂 Estructura del Proyecto
 
-Dentro del proyecto Astro encontrarás la siguiente estructura de carpetas y archivos:
-## 🚀 Tecnologías
-
-Este proyecto fue construido utilizando:
-
-Astro-
-Tailwind CSS-
-TypeScript-
-FontAwesome-
 
 ```
 /
@@ -52,7 +43,7 @@ FontAwesome-
 │   │   │ 
 │   │   └── servicios.astro - servicios
 
-
+```
 ##  Comandos del Proyecto
 
 Todos los comandos se ejecutan desde la raíz del proyecto:
