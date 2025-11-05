@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro"
+import imagennosotros from "../assets/img/acercadenosotros.jpg"
+import Titulo from '../components/titulo.astro';
+import cementeriomunicipal from "../assets/img/cementeriomunicipal.jpg"
+import carrozanosotros from "../assets/img/carrozanosotros.jpg"
+import TradicionModernidad from '../components/tradicionmodernidad.astro';
+---
+  <!-- pagina de nosotros/nuestra empresa -->
+<Layout>
+ 
+
+<Titulo titulo="Acerca de funeraria pluma" />
+
+  <main>
+  <!-- acerca de nosotros -->
+
+  <section class="bg-white pt-0 y pb-20 ">
+  <div class="flex flex-col sm:flex-row-reverse "> 
+    
+    <div class="md:w-1/2 text-gray-800 flex flex-col justify-center bg-gray-900 p-12 shadow">
+      
+      <p class="text-lg font-semibold text-gray-100 mb-10">NUESTRO PROPÓSITO</p>
+      
+   <h2 class="text-4xl lg:text-4xl font-bold text-gray-100 leading-tight mb-12"> Acompañar y dar el mejor servicio a las familias de Chiloé</h2>
+      
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+         En Funeraria Pluma, entendemos que cada despedida es única, y por eso ofrecemos un servicio cercano, profesional y profundamente respetuoso. Nuestra misión es acompañar en los momentos más difíciles, brindando un apoyo honesto y cálido.
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+Una empresa de confianza para la comunidad de Castro. Nuestro compromiso va más allá de un simple servicio; se trata de ser un pilar de apoyo en un momento de vulnerabilidad, gestionando con sensibilidad todos los trámites y detalles para que las familias puedan vivir su duelo con tranquilidad. </p>
+    
+    </div> 
+
+    <div class="md:w-1/2">
+      <img 
+        src={imagennosotros.src}  alt="nuestra empresa" 
+       class="w-full h-full md:h-[779px] object-cover ">
+    </div>
+
+  </div>
+</section>
+
+<section>
+
+  <TradicionModernidad />
+
+</Layout>

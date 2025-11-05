@@ -1,0 +1,22 @@
+---
+
+const { titulo, descripcion, imagenUrl, slug } = Astro.props;
+---
+
+<!-- tarjetas de cada uno de los 6 servicios -->
+
+<div class="bg-white border border-yellow-400 shadow-lg hover:shadow-2xl transition flex flex-col h-full overflow-hidden rounded-lg">
+  <img src={imagenUrl}  alt={titulo}  class="w-full h-60 object-cover" >
+  <div class="p-6 flex-grow">
+    <h3 class="text-xl font-bold mb-2 text-gray-800">{titulo}</h3>
+    <p class="text-base text-gray-600 mt-4">{descripcion}</p> 
+  </div>
+  <div class="mt-auto px-6 pb-6">
+    <a
+      href={`/servicios/${slug}`} 
+      class="inline-block bg-sky-900 text-gray-50 font-semibold px-2 py-2 hover:bg-sky-700 transition-colors"> 
+      ver más
+    </a>
+  </div>
+
+</div>

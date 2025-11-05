@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TarjetaServicio from '../components/tarjetaServicio.astro';
+import { serviciosData } from '../data/servicios.ts';
+import Titulo from '../components/titulo.astro'; 
+---
+  <!-- pagina de servicios con .map -->
+<Layout>
+       <Titulo titulo="Servicios funerarios" />
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {
+          serviciosData.map(servicio => (
+            <TarjetaServicio
+              titulo={servicio.titulo}
+              descripcion={servicio.descripcion}
+              imagenUrl={servicio.imagenUrl}
+              slug={servicio.slug}  />
+          ))
+        }
+      </div>
+
+    </div>
+  </section>
+</Layout>

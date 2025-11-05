@@ -1,11 +1,97 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import fondo from '../assets/img/fondo.jpg';
+import calidez from '../assets/img/calidez-612x612.jpg';
+import isla from '../assets/img/isla chiloe.jpg';
+import fachada from '../assets/img/fachada castro-894x596.jpeg';
+import Porqueelegirnos from '../components/porqueelegirnos.astro';
 ---
 
+  <!-- pagina principal-->
 <Layout>
-	<Welcome />
+<section class="relative text-center py-48 px-5 bg-cover bg-center" 
+ style={`background-image: url(${fondo.src});`}>
+
+
+  <!-- Fondo transparente-->
+  <div class="absolute inset-0 bg-black opacity-45"></div>
+
+  <!-- Contenido encima del fondo -->
+  <div class="relative z-10">
+    <h2 class="text-2xl md:text-3xl font-bold mb-10 text-white">
+      Su satisfaccion y la de los suyos, sera nuestro mayor reto.
+    </h2>
+    <p class="text-gray-100 max-w-2xl mx-auto mb-10">
+      En Funeraria Pluma entendemos que cada funeral es único y cada familia merece respeto y acompañamiento.
+    </p>
+    <a href="servicios" class="bg-sky-900 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-700 transition">
+      Información de servicios
+    </a>
+  </div>
+</section>
+
+<!--pagemedium-->
+
+  <Porqueelegirnos />
+
+
+<!-- Imagen emergencia -->
+ <section class="relative bg-black text-white py-40 px-6">
+    <div class="absolute inset-0 max-w-8xl">
+      <img 
+    src={isla.src} 
+    alt="isla de chiloe" 
+    class="w-full h-full opacity-30" 
+  />
+    </div>
+
+    <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center z-10">
+        
+        <div class="md:w-2/3 text-center md:text-left mb-8 md:mb-0">
+            <h2 class="text-4xl font-bold mb-12">¿Tienes una emergencia?</h2>
+            <p class="text-lg text-gray-100 leading-relaxed">
+                Si necesitas asistencia funeraria en Castro o sus alrededores, permítenos brindarte ayuda.
+                 Nuestros asesores están disponibles las 24 horas del día, los 7 días de la semana.
+                  No dudes en contactarnos para recibir ayuda inmediata.
+            </p>
+        </div>
+
+        <div class="md:w-1/3 flex justify-center md:justify-end">
+            <a href="tel:+56945408883" 
+               class="bg-blue-900 text-white font-bold py-4 px-8 text-lg hover:bg-blue-700 rounded-lg text-center">
+                Necesito ayuda ahora
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="bg-gray-200 py-20 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-sky-900">
+            <h2 class="text-3xl font-bold mb-10">Estamos al Servicio de la Comunidad de Castro</h2>
+            <p class="text-gray-600 mb-4 text-lg">
+                La confianza de nuestros vecinos es el pilar de Funeraria Pluma. Nuestra fuerte presencia local se demuestra en nuestro compromiso diario: ofrecer un apoyo honesto, profesional y profundamente respetuoso a cada familia que nos necesita.
+            </p>
+            <p class="text-gray-600 text-lg">
+Funeraria Pluma ha acompañado a la comunidad de Castro en los momentos más sensibles. Nuestra fuerte presencia local se ha construido día a día, con un servicio cercano y un profundo respeto por las familias de Chiloé.
+
+Conocemos a nuestros vecinos y entendemos la importancia de un adiós digno. Por eso, nuestro mayor orgullo es ser la funeraria en la que los habitantes de Castro han depositado su confianza a lo largo de los años.
+            </p>
+        </div>
+
+    <div class="border border-yellow-400 rounded-lg shadow-xl">
+      <img 
+       src={fachada.src} 
+       alt="Fachada ciudad de castro" 
+      class=" w-full h-auto object-cover" 
+       />
+      </div>
+
+    </div>
+</section>
+	
 </Layout>

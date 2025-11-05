@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TarjetaObituario from '../components/tarjetaObituario.astro';
+import { obituariosData } from '../data/tarjeta.ts'; 
+import Titulo from '../components/titulo.astro';
+---
+  <!-- pagina principal de los obituarios con .map -->
+<Layout>
+    <Titulo titulo="Obituarios" />
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        
+   
+        {
+          obituariosData.map(item => (
+            <TarjetaObituario
+              nombre={item.nombre}
+              fecha={item.fecha}
+              detalles={item.detalles}
+              imagenUrl={item.imagenUrl}
+            />
+          ))
+        }
+      </div>
+
+    </div>
+  </section>
+</Layout>

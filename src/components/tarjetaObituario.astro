@@ -1,0 +1,13 @@
+---
+// props
+const { nombre, fecha, detalles, imagenUrl } = Astro.props;
+---
+
+ <!--  Obituarios/tarjetas de personas fallecidas -->
+<div class="bg-white border border-yellow-300 rounded-lg p-6 shadow hover:shadow-lg transition">
+  
+  <img src={imagenUrl} alt={`Obituario de ${nombre}`} class="w-32 h-40 object-cover mb-4 mx-auto">
+  <h3 class="text-xl font-semibold text-gray-800 text-center">{nombre}</h3>
+  <p class="text-gray-600 text-sm mb-4 text-center">{fecha}</p>
+  <p class="text-gray-700 text-sm mb-4 text-left"> {detalles} </p>
+</div>
